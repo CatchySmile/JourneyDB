@@ -1,6 +1,6 @@
 # JourneyDB
 
-Preview :
+**Preview :**
 
 ![image](https://github.com/user-attachments/assets/b58b4236-54ed-4b89-9283-856a97561aae)
 
