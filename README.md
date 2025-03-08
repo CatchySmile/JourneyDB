@@ -1,7 +1,10 @@
 # JourneyDB
 
 Preview :
-![image](https://github.com/user-attachments/assets/7db149ec-d880-47cd-b822-5b5cca40cebb)
+
+![image](https://github.com/user-attachments/assets/b58b4236-54ed-4b89-9283-856a97561aae)
+
+
 This is a simple web-app for managing user-data and for creating & upkeeping an information dossier.
 
 ## Features
