@@ -1,0 +1,91 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Enforce a strict CSP -->   
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline';">
+  <title>JourneyDB - Information Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <div class="container">
+      <div id="mainContainer">
+          <!-- Left: Form Section -->
+          <div id="formContainer">
+              <h1>JourneyDB - Information Manager</h1>
+              <form id="userForm" aria-label="User Information Form">
+                <label for="username">Username/Name:</label>
+                <input type="text" id="username" name="username" required maxlength="32">
+
+                  <label for="wdym">WDYM?:</label>
+                  <input type="text" id="wdym" name="wdym" required>
+                  
+                  <!-- Container for dynamic custom field pairs -->
+                  <div id="customFieldsContainer"></div>
+                  <button type="button" id="addFieldButton" class="settings-button" title="Add custom field">+ Add Field</button>
+                  <button type="submit">Create JSON</button>                  
+              </form>
+          </div>
+          
+          <!-- Right: File Viewer Section -->
+          <div id="filesContainer">
+              <h2>Saved JSON Files</h2>
+              <div id="fileViewer" tabindex="0"></div>
+              
+              <!-- Controls Panel: Settings Panel + Search Panel -->
+              <div id="controlsPanel">
+                  <!-- Settings Panel -->
+                  <div id="settingsPanel" role="region" aria-label="File Controls">
+                      <label>
+                          <input type="checkbox" id="rawViewToggle" title="Toggle Raw View"> Raw View
+                      </label>
+                      <label>
+                          <input type="checkbox" id="massSelect" title="Mass Select"> Mass Select
+                      </label>
+                      <label>
+                          <button id="DeleteFile" class="settings-button" title="Delete Selected File">Delete</button>
+                      </label>
+                      <label>
+                        <button id="clearStorage" class="settings-button" title="Clear Local Storage">Delete all</button>
+                      </label>
+                      <label>
+                        <button id="downloadOne" class="settings-button" title="Download Selected File">Download</button>
+                    </label>
+                      <label>
+                        <button id="downloadAll" class="settings-button" title="Download All Files">Download All</button>
+                      </label>  
+                      <label>
+                        <button id="editFile" class="settings-button" title="Edit Selected File">Edit</button>
+                    </label>
+                <label>
+                    <button id="importFile" class="settings-button" title="Import JSON File(s)">Import</button>
+                </label>
+                <input type="file" id="fileImport" accept=".json" multiple style="display: none;">
+                     </div>
+...
+                  
+                  <!-- Search Panel -->
+                  <div id="searchPanel">
+                      <label for="fileSearch">Search Files:</label>
+                      <input type="text" id="fileSearch" placeholder="Enter file name or UID...">
+                  </div>
+              </div>
+
+              <div id="viewerContainer">
+                  </div>
+              </div>
+          </div>
+          <div id="fileContent">
+            <h3>Raw JSON</h3>
+            <pre id="fileText"></pre>
+        </div>
+          <div id="graphicalView" class="graphicalView">
+            <h3>Graphical JSON</h3>
+            <div id="jsonGraph"></div>
+      </div>
+      
+  </div>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>
