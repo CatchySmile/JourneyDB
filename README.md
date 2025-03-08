@@ -41,4 +41,4 @@ This project was designed to be ran locally, dont blame the messenger.
 
 ## License
 
-This project is open-source. Feel free to modify and use it as needed.
+This project is licensed under the terms of the MIT license.
